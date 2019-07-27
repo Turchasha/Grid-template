@@ -1,0 +1,36 @@
+.header-content {
+    position: relative;
+    
+    &__container {
+        @extend %container;
+    }
+
+    &__title {
+        text-align: center;
+        letter-spacing: 0.08em;
+
+        /* более 992 */
+        @include lg-min {
+            margin: 0 0 53px;
+        }
+        /* между 992 и 768 */
+        @include lg-md {
+            margin: 0 0 43px;
+        }
+        /* менне 768 */
+        @include md {
+            margin: 0 0 43px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        .btn:first-of-type {
+            margin-right: $gap;
+        }
+    }
+}
+
+
+

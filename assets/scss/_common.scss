@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+  
+html {
+    letter-spacing: 0.1em;
+    color: $color-gray;
+    font-family: "Roboto", serif;
+    font-size: $font-size;
+    overflow-y: scroll;
+}
+h1 {
+    font-family: $font-header;
+    font-weight: $gap*15;
+    line-height: 1.2em;
+    
+    /* более 992 */
+    @include lg-min {
+        font-size: 3.75rem;
+    }
+    /* между 992 и 768 */
+    @include lg-md {
+        font-size: 2.5rem;
+    }
+    /* менне 768 */
+    @include md {
+        font-size: 1.875rem;
+    }
+}
+    
+h2 {
+    font-family: $font-header;
+    line-height: 1.2em;
+    color: $color-main;
+}
+h3 {
+    color: $color-gray;
+  
+}
+p {
+    letter-spacing: 1px;
+    color: $color-gray;
+}
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+input:focus {
+    outline: none;
+}
+
+.btn {
+    border: 2px solid $color-light;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: $gap*12.5;
+
+    @extend %btn;
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent;
+    }
+}
+.btn-accent {
+    border: 2px solid $color-main;
+    background-color: rgba(45, 54, 81, 0.8);
+    min-width: $gap*17.5;
+    
+    @extend %btn;
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent;
+    }
+}

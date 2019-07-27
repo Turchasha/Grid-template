@@ -1,0 +1,2 @@
+$(document).ready(function(){$(".header-navbar__hamburger").on("click",function(){$(this).toggleClass("active"),$(".header-navbar__list").stop(!0,!0).fadeToggle(500)})});
+//# sourceMappingURL=main-dist.js.map

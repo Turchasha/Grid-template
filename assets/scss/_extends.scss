@@ -1,0 +1,18 @@
+%container {
+    max-width: $ul;
+    margin: auto;
+    padding-left: $gap;
+    padding-right: $gap;
+}
+
+%btn {
+    display: block;
+    padding: ($gap - 2px) $gap;
+    height: $gap*3;
+    text-align: center;
+    font-size: 1.125rem;
+    transition: background-color 0.5s;
+}
+
+// .header-menu__container,
+// .header-content__container 

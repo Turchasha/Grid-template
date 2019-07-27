@@ -1,0 +1,17 @@
+.header-logo {
+    font-style: 1.5rem;
+    letter-spacing: 0.2em;
+    align-self: center;
+
+    &__link {
+        display: block;
+        padding: $gap $gap $gap 0;
+    }
+    
+    &__accent {
+        display: inline-block;
+        margin-right: $gap/4;
+        padding: $gap*0.75 $gap*0.15 $gap*0.75 $gap*0.35;
+        border: $gap*0.1 solid $color-highlight;
+    }
+}
