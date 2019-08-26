@@ -1,17 +1,64 @@
 %container {
-    max-width: $ul;
-    margin: auto;
-    padding-left: $gap;
-    padding-right: $gap;
+  max-width: $ul;
+  margin: auto;
+  padding-left: $gap;
+  padding-right: $gap;
 }
 
-%btn {
-    display: block;
-    padding: ($gap - 2px) $gap;
-    height: $gap*3;
-    text-align: center;
-    font-size: 1.125rem;
-    transition: background-color 0.5s;
+%section {
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+  @include lg-md {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+}
+
+%btn-common {
+  display: block;
+  padding: 18px $gap;
+  height: $gap * 3;
+  text-align: center;
+  letter-spacing: 0.1em;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.125rem;
+  transition: background-color 0.5s; border-color: 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+
+%btn-min-size {
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+
+%btn-wrapper {
+  @include sm-min {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-accent {
+    @extend %btn-min-size;
+  }
 }
 
 // .header-menu__container,

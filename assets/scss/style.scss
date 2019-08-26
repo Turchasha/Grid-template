@@ -2,7 +2,7 @@
 @import "../../libs/normalize-scss/sass/normalize/import-now";
 @import "skin";
 @import "variables";
-// @import "mixins";
+@import "mixins";
 @import "mixins-media";
 @import "extends";
 
@@ -16,11 +16,11 @@
 @import "header/header-content";
 
 @import "sections/section-skills";
-// @import "sections/section-about";
-// @import "sections/section-form";
-// @import "sections/section-posts";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/section-posts";
 
-// @import "footer";
+@import "footer";
 
 
 

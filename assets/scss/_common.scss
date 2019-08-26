@@ -3,15 +3,14 @@
 }
   
 html {
-    letter-spacing: 0.1em;
     color: $color-gray;
-    font-family: "Roboto", serif;
+    font-family: $font-main;
     font-size: $font-size;
-    overflow-y: scroll;
 }
+
 h1 {
     font-family: $font-header;
-    font-weight: $gap*15;
+    font-weight: 300;
     line-height: 1.2em;
     
     /* более 992 */
@@ -32,15 +31,38 @@ h2 {
     font-family: $font-header;
     line-height: 1.2em;
     color: $color-main;
+    letter-spacing: 0.1em;
+
+    @include lg-min {
+        margin-bottom: $gap * 2.8;
+        font-size: 2.5rem;
+    }
+    @include lg-md {
+        margin-bottom: $gap * 2.1;
+        font-size: 2rem;
+    }
+    @include md-sm {
+        margin-bottom: $gap * 1.8;
+        font-size: 1.5rem;
+    }
+    @include sm {
+        margin-bottom: $gap * 1.8;
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
+
 h3 {
     color: $color-gray;
+    letter-spacing: 0.05em;
+    font-size: 1.125rem;
   
 }
+
 p {
-    letter-spacing: 1px;
     color: $color-gray;
 }
+
 a {
     text-decoration: none;
     color: $color-light;
@@ -50,26 +72,14 @@ input:focus {
 }
 
 .btn {
-    border: 2px solid $color-light;
-    background-color: rgba(255, 255, 255, 0.1);
-    min-width: $gap*12.5;
+    border-color: $color-light;
+    background-color: rgba($color-light, 0.1);
 
-    @extend %btn;
-
-    &:hover,
-    &:focus {
-        background-color: $color-accent;
-    }
+    @extend %btn-common;
 }
 .btn-accent {
-    border: 2px solid $color-main;
-    background-color: rgba(45, 54, 81, 0.8);
-    min-width: $gap*17.5;
+    border-color: $color-main;
+    background-color: rgba($color-main, 0.8);
     
-    @extend %btn;
-
-    &:hover,
-    &:focus {
-        background-color: $color-accent;
-    }
+    @extend %btn-common;
 }

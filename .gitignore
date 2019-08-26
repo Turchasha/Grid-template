@@ -5,5 +5,4 @@ temp/
 .idea/
 */scss-comb/
 node_modules
-libs/
-samples/
+
